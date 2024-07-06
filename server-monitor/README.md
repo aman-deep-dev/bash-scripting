@@ -1,1 +1,1 @@
-# Script to print the current cpu and memory usage every 5 seconds
+## Script to print the current cpu and memory usage every 5 seconds
