@@ -2,7 +2,14 @@
 
 logfile=/home/amandeep/shell-scripting/bash-scripting/log-rotate/logs/accesslogs.txt
 archivedir=/home/amandeep/shell-scripting/bash-scripting/log-rotate/log-archive
-maxsize=10000  #max size in bytes (1 mb)
+maxsize=$1  #max size in bytes (1 mb)
+
+# Check if maxsize argument is provided
+if [ -z "$maxsize" ]; then
+  echo "Error: Missing maxsize argument."
+  exit 1
+fi
+
 
 logsize=$(stat -c%s "$logfile")
 echo "size of logfile" $logsize
