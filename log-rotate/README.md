@@ -1,7 +1,13 @@
-Script to archive log file if its greater than max size provided by user.
+# Log Rotation Script
 
-To run,
-./log-rotate.sh <maxsize in bytes>
-./log-rotate.sh 1000000  
+## Description
 
-Edit the logfile and destination files accordingly
+This script archives a log file if its size exceeds a maximum size provided by the user. It moves the current log file to an archive directory, creates a new empty log file, and optionally compresses the archived log file.
+
+## Usage
+
+To run the script, execute the following command in your terminal:
+
+```bash
+./log-rotate.sh -s <maxsize>
+
